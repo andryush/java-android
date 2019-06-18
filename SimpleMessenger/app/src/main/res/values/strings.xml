@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleMessenger</string>
+    <string name="hint_message">Type message to send</string>
+    <string name="send_button">Send message</string>
+</resources>

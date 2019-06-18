@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ColorTest</string>
+    <string name="main_button">Detect color</string>
+
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="colors_description">
+        <item>"Red is the color of extremes. It's the color of passionate love, seduction, violence, danger, anger, and adventure. Our prehistoric ancestors saw red as the color of fire and blood – energy and primal life forces – and most of red's symbolism today arises from its powerful associations in the past."</item>
+        <item>"Orange, the blend of red and yellow, is a mixture of the energy associated with red and the happiness associated with yellow. Orange is the color of joy and creativity. Orange promotes a sense of general wellness and emotional energy that should be shared, such as compassion, passion, and warmth."</item>
+        <item>"Yellow, the color of sunshine, hope, and happiness, has conflicting associations. A dull or dingy yellow may represent caution, sickness, and jealousy. Studies show that the meaning of the color yellow can be warmth, cheerfulness, increased mental activity, increased muscle energy."</item>
+        <item>"Green, the color of life, renewal, nature, and energy, is associated with meanings of growth, harmony, freshness, safety, fertility, and environment. Green is also traditionally associated with money, finances, banking, ambition, greed, jealousy, and wall street. Green is soothing, relaxing, and youthful."</item>
+        <item>"Blue is the favorite color of all people. It's nature's color for water and sky, but is rarely found in fruits and vegetables. (The origin of these meanings is the intangible aspects of the sky.) Most blues convey a sense of trust, loyalty, cleanliness, and understanding."</item>
+    </string-array>
+
+</resources>
