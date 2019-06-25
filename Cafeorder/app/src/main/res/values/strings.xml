@@ -9,7 +9,7 @@
     <string name="tv_hello_user">Hello %s, what you want to drink?</string>
     <string name="rb_tea">Tea</string>
     <string name="rb_coffee">Coffee</string>
-    <string name="tv_ingredients">WHAT YOU LIKE TO ADD</string>
+    <string name="tv_ingredients">What you like to add to your %s</string>
     <string name="cb_sugar">Sugar</string>
     <string name="cb_milk">Milk</string>
     <string name="cb_lemon">Lemon</string>
@@ -17,6 +17,8 @@
     <string name="order_button">order_button</string>
     <string name="default_name">Client</string>
     <string name="default_password">NULL</string>
+    <string name="need_additions">Selected additions is </string>
+    <string name="no_additions">No additions selected</string>
 
 
     <string-array name="options_of_coffee">

@@ -36,7 +36,7 @@
             android:id="@+id/rb_tea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginBottom="30dp"
             android:checked="true"
             android:buttonTint="@color/white"
             android:textColor="@color/white"
@@ -45,7 +45,7 @@
 
         <RadioButton
             android:id="@+id/rb_coffee"
-            android:layout_margin="8dp"
+            android:layout_marginBottom="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/white"
@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/tv_ingredients_offer"
-        android:layout_margin="8dp"
+        android:layout_margin="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/rbg_coffeeTea"
@@ -108,7 +108,7 @@
 
     <TextView
         android:id="@+id/tv_drinkType"
-        android:layout_margin="8dp"
+        android:layout_margin="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/cb_lemon"
@@ -124,7 +124,7 @@
         android:visibility="visible"
         android:id="@+id/sp_tea"
         android:layout_margin="8dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tv_drinkType"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +135,7 @@
         android:visibility="invisible"
         android:id="@+id/sp_coffee"
         android:layout_margin="8dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tv_drinkType"
         app:layout_constraintStart_toStartOf="parent"
