@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Cafe order</string>
+    <string name="welcome">Welcome to the cafe</string>
+    <string name="name_hint">Name</string>
+    <string name="password_hint">Password</string>
+    <string name="content_description">Login screen image</string>
+    <string name="btn_login">Login</string>
+    <string name="login_required">All fields are required</string>
+    <string name="tv_hello_user">Hello %s, what you want to drink?</string>
+    <string name="rb_tea">Tea</string>
+    <string name="rb_coffee">Coffee</string>
+    <string name="tv_ingredients">WHAT YOU LIKE TO ADD</string>
+    <string name="cb_sugar">Sugar</string>
+    <string name="cb_milk">Milk</string>
+    <string name="cb_lemon">Lemon</string>
+    <string name="tv_drink_type">CHOOSE DRINK TYPE</string>
+    <string name="order_button">order_button</string>
+    <string name="default_name">Client</string>
+    <string name="default_password">NULL</string>
+
+
+    <string-array name="options_of_coffee">
+        <item>Americano</item>
+        <item>Espresso</item>
+        <item>Latte</item>
+    </string-array>
+
+    <string-array name="options_of_tea">
+        <item>Black</item>
+        <item>Green</item>
+        <item>Red</item>
+    </string-array>
+</resources>

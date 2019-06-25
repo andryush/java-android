@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/darkBlue">
+
+    <ImageView
+        android:id="@+id/iv_login_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/cafelogo" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:text="@string/welcome"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/lightBlue"
+        android:text="@string/btn_login"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:onClick="onClickLogin"/>
+
+</LinearLayout>

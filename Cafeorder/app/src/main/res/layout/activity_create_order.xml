@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateOrderActivity"
+    android:background="@color/darkBlue">
+
+    <TextView
+        android:id="@+id/tv_helloUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/tv_hello_user" />
+
+    <RadioGroup
+        android:id="@+id/rbg_coffeeTea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_helloUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_tea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:text="@string/rb_tea"/>
+
+        <RadioButton
+            android:id="@+id/rb_coffee"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/rb_coffee"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_ingredients_offer"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rbg_coffeeTea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/tv_ingredients"/>
+
+    <CheckBox
+        android:id="@+id/cb_sugar"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ingredients_offer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cb_milk"
+        android:textColor="@color/white"
+        android:text="@string/cb_sugar"/>
+
+    <CheckBox
+        android:id="@+id/cb_milk"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ingredients_offer"
+        app:layout_constraintStart_toEndOf="@+id/cb_sugar"
+        app:layout_constraintEnd_toStartOf="@+id/cb_lemon"
+        android:textColor="@color/white"
+        android:text="@string/cb_milk"/>
+
+    <CheckBox
+        android:id="@+id/cb_lemon"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ingredients_offer"
+        app:layout_constraintStart_toEndOf="@+id/cb_milk"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:text="@string/cb_lemon"/>
+
+    <TextView
+        android:id="@+id/tv_drinkType"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cb_lemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/tv_drink_type"/>
+
+    <Spinner
+        android:visibility="visible"
+        android:id="@+id/sp_tea"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_drinkType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:entries="@array/options_of_tea"/>
+
+    <Spinner
+        android:visibility="invisible"
+        android:id="@+id/sp_coffee"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_drinkType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:entries="@array/options_of_coffee"/>
+
+    <ImageView
+        android:id="@+id/iv_order_image"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sp_coffee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/blueorderbutton"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
