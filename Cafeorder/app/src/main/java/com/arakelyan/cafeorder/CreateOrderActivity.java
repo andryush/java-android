@@ -98,8 +98,8 @@ public class CreateOrderActivity extends AppCompatActivity {
             builderAdditions.append(getString(R.string.cb_sugar)).append(" ");
         }
 
-        if (checkBoxSugar.isChecked()) {
-            builderAdditions.append(getString(R.string.cb_sugar)).append(" ");
+        if (checkBoxMilk.isChecked()) {
+            builderAdditions.append(getString(R.string.cb_milk)).append(" ");
         }
 
         if (checkBoxLemon.isChecked() && drink.equals(getString(R.string.rb_tea))) {
@@ -115,12 +115,12 @@ public class CreateOrderActivity extends AppCompatActivity {
             optionsDrink = spinnerCoffee.getSelectedItem().toString();
         }
 
-        String order = String.format("Name: %s\nPassword: %s\n Drink: %s\nDrink type: %s\n", name, password, drink, optionsDrink);
+        String order = String.format("Name: %s\n\nPassword: %s\n\nDrink: %s\n\nDrink type: %s\n\n", name, password, drink, optionsDrink);
 
         String additions;
 
         if (builderAdditions.length() > 0) {
-            additions = getString(R.string.need_additions) + builderAdditions.toString();
+            additions = getString(R.string.need_additions) +"\n" + builderAdditions.toString();
         }
         else {
             additions = getString(R.string.no_additions);

@@ -17,7 +17,7 @@
     <string name="order_button">order_button</string>
     <string name="default_name">Client</string>
     <string name="default_password">NULL</string>
-    <string name="need_additions">Selected additions is </string>
+    <string name="need_additions">Selected additions: </string>
     <string name="no_additions">No additions selected</string>
 
 
