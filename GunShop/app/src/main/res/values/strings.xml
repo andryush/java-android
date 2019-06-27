@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Gun Shop</string>
+    <string name="logo_alt">Gun Shop logo description</string>
+
+    <!--Main menu guns list-->
+    <string-array name="main_gun_list">
+        <item>Guns</item>
+        <item>Shotguns</item>
+        <item>Assault rifles</item>
+        <item>Sniper rifles</item>
+    </string-array>
+</resources>
