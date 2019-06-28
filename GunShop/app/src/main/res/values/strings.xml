@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Gun Shop</string>
     <string name="logo_alt">Gun Shop logo description</string>
+    <string name="guns_logo_description">Guns list</string>
 
     <!--Main menu guns list-->
     <string-array name="main_gun_list">
@@ -9,4 +10,17 @@
         <item>Assault rifles</item>
         <item>Sniper rifles</item>
     </string-array>
+
+    <!--Guns names-->
+    <string name="gun_name_tt">TT pistol</string>
+    <string name="gun_name_stechkin">Stechkin automatic pistol</string>
+    <string name="gun_name_makarov">Makarov pistol</string>
+
+    <!--Guns descriptions-->
+    <string name="gun_description_tt">The TT-30[a] is a Russian semi-automatic pistol. It was developed in the early 1930s by Fedor Tokarev as a service pistol for the Soviet military to replace the Nagant M1895 revolver that had been in use since Tsarist times, though it ended up being used in conjunction with rather than replacing the M1895. It served until 1952, when it was replaced by the Makarov pistol.</string>
+    <string name="gun_description_stechkin">The Stechkin automatic pistol or APS (Avtomaticheskiy Pistolet Stechkina = Автоматический Пистолет Стечкина) is a Soviet selective fire machine pistol chambered in 9×18mm Makarov and 9x19mm Parabellum introduced into service in 1951 for use with artillery and mortar crews, tank crews and aircraft personnel, where a cumbersome assault rifle was deemed unnecessary. Seeing service in a number of wars such as the Vietnam war, War in Donbass, and Syrian Civil War. The APS was praised for its innovative concept and good controllability for its size. However, the high cost of the weapon, complex and time-consuming machining, combined with a limited effective range, large size and weight for a pistol, and fragile buttstock have been mentioned as a reason to phase it out of active service in favour of an Assault rifle such as the AKS-74U. The pistol bears the name of its developer, Igor Stechkin.</string>
+    <string name="gun_description_makarov">The Makarov pistol or PM (Russian: Пистолет Макарова, Pistolet Makarova, literally Makarov\'s Pistol) is a Russian semi-automatic pistol. Under the project leadership of Nikolay Fyodorovich Makarov, it became the Soviet Union\'s standard military and police side arm in 1951.</string>
+    <string name="iv_description">image</string>
+
+
 </resources>
