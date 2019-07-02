@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".AssaultRiflesActivity">
 
+
+    <ImageView
+        android:id="@+id/iv_assault_rifles_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/akmcustom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gl_assault_rifles"
+        android:contentDescription="@string/assault_rifles_alt" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_assault_rifles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <ListView
+        android:id="@+id/lv_assault_rifles_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/gl_assault_rifles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

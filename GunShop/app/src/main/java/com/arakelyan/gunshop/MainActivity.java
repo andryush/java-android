@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,18 +38,13 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case 1:
-                        Intent shotgunsIntent = new Intent(getApplicationContext(), ShotgunsActivity.class);
+                        Intent shotgunsIntent = new Intent(getApplicationContext(), AssaultRiflesActivity.class);
                         startActivity(shotgunsIntent);
                         break;
 
                     case 2:
-                        Intent assaultRiflesIntent = new Intent(getApplicationContext(), AssaultRiflesActivity.class);
+                        Intent assaultRiflesIntent = new Intent(getApplicationContext(), RiflesActivity.class);
                         startActivity(assaultRiflesIntent);
-                        break;
-
-                    case 3:
-                        Intent riflesIntent = new Intent(getApplicationContext(), RiflesActivity.class);
-                        startActivity(riflesIntent);
                         break;
                 }
 

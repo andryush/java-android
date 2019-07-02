@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Gun Shop</string>
     <string name="logo_alt">Gun Shop logo description</string>
     <string name="guns_logo_description">Guns list</string>
@@ -6,7 +7,6 @@
     <!--Main menu guns list-->
     <string-array name="main_gun_list">
         <item>Guns</item>
-        <item>Shotguns</item>
         <item>Assault rifles</item>
         <item>Sniper rifles</item>
     </string-array>
@@ -21,6 +21,19 @@
     <string name="gun_description_stechkin">The Stechkin automatic pistol or APS (Avtomaticheskiy Pistolet Stechkina = Автоматический Пистолет Стечкина) is a Soviet selective fire machine pistol chambered in 9×18mm Makarov and 9x19mm Parabellum introduced into service in 1951 for use with artillery and mortar crews, tank crews and aircraft personnel, where a cumbersome assault rifle was deemed unnecessary. Seeing service in a number of wars such as the Vietnam war, War in Donbass, and Syrian Civil War. The APS was praised for its innovative concept and good controllability for its size. However, the high cost of the weapon, complex and time-consuming machining, combined with a limited effective range, large size and weight for a pistol, and fragile buttstock have been mentioned as a reason to phase it out of active service in favour of an Assault rifle such as the AKS-74U. The pistol bears the name of its developer, Igor Stechkin.</string>
     <string name="gun_description_makarov">The Makarov pistol or PM (Russian: Пистолет Макарова, Pistolet Makarova, literally Makarov\'s Pistol) is a Russian semi-automatic pistol. Under the project leadership of Nikolay Fyodorovich Makarov, it became the Soviet Union\'s standard military and police side arm in 1951.</string>
     <string name="iv_description">image</string>
+
+    <!--Assault rifles names-->
+    <string name="assault_rifle_name_ak74">AK-74</string>
+    <string name="assault_rifle_name_m4">M4 carbine</string>
+    <string name="assault_rifle_name_aug">Steyr AUG</string>
+
+    <!--Assault rifles descriptions-->
+    <string name="assault_rifle_description_ak74">The AK-74 (Russian: Автомат Калашникова образца 1974 года or \"Kalashnikov automatic rifle model 1974\") is an assault rifle developed in the early 1970s by Russian designer Mikhail Kalashnikov to replace the earlier AKM (itself a refined version of the AK-47). It uses a smaller 5.45×39mm cartridge, replacing the 7.62×39mm chambering of earlier Kalashnikov-pattern weapons. The rifle first saw service with Soviet forces in the 1979 Afghanistan conflict. The head of the Afghan bureau of the Pakistani Inter-Services Intelligence claimed that the CIA paid $5,000 for the first AK-74 captured by the Mujahideen during the Soviet–Afghan War. Today, the rifle is used by most countries of the former Soviet Union. Licensed copies were produced in Bulgaria (AK-74, AKS-74 and AKS-74U), and the former East Germany (MPi-AK-74N, MPi-AKS-74N, MPi-AKS-74NK).</string>
+    <string name="assault_rifle_description_m4">The M4 carbine is a shorter and lighter variant of the M16A2 assault rifle. The M4 is a 5.56×45mm NATO, air-cooled, direct impingement gas-operated, magazine-fed carbine. It has a 14.5 in (370 mm) barrel and a telescoping stock. The M4 carbine is extensively used by the United States Armed Forces and is largely replacing the M16 rifle in United States Army and United States Marine Corps combat units as the primary infantry weapon and service rifle. The M4 is also capable of mounting the M203 and M320 grenade launchers. The distinctive step in its barrel is for mounting the M203 with the standard hardware. The M4 has semi-automatic and three-round burst firing modes (like the M16A2 and M16A4), while the M4A1 has semi-automatic and fully automatic firing modes (like the M16A1 and M16A3).</string>
+    <string name="assault_rifle_description_aug">The Steyr AUG (Armee-Universal-Gewehr—\"universal army rifle\") is an Austrian 5.56×45mm NATO bullpup assault rifle, designed in the 1960s by Steyr-Daimler-Puch and now manufactured by Steyr Mannlicher GmbH &amp; Co KG.It was adopted by the Austrian Army as the StG 77 (Sturmgewehr 77) in 1978, where it replaced the 7.62×51mm NATO StG 58 automatic rifle (a licence-built FN FAL). In production since 1978, it is the standard small arm of the Austrian Bundesheer and various national police units. Its variants have also been adopted by the armed forces of dozens of countries.</string>
+
+    <string name="assault_rifles_alt">Assault rifles logo image</string>
+    <string name="iv_assault_rifles_image">image</string>
 
 
 </resources>
