@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GuessPerson</string>
+    <string name="content_description_person_image">Person image</string>
+</resources>
