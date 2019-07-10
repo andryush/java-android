@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyWeatherApp</string>
+    <string name="search_city_hint">Please enter the city name</string>
+    <string name="background_image">TODO</string>
+    <string name="btn_search">SEARCH</string>
+    <string name="city_autoFill">City</string>
+</resources>
