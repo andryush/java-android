@@ -28,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/gl_bottom"
-        android:text="HELLO WORLD"
         android:textSize="32sp"
         android:gravity="center"/>
 
@@ -41,7 +40,6 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_option1"
         app:layout_constraintBottom_toTopOf="@id/tv_option2"
         android:background="@color/colorRed"
-        android:text="TEST0"
         android:textSize="@dimen/text_size_inside_textview_options"
         android:textColor="@color/colorWhite"
         android:gravity="center"
@@ -56,7 +54,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_option3"
         android:background="@color/colorBlue"
-        android:text="TEST1"
         android:textSize="@dimen/text_size_inside_textview_options"
         android:textColor="@color/colorWhite"
         android:gravity="center"
@@ -71,7 +68,6 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_option3"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/colorOrange"
-        android:text="TEST2"
         android:textSize="@dimen/text_size_inside_textview_options"
         android:textColor="@color/colorWhite"
         android:gravity="center"
@@ -86,7 +82,6 @@
         app:layout_constraintStart_toEndOf="@id/tv_option2"
         app:layout_constraintTop_toBottomOf="@+id/tv_option1"
         android:background="@color/colorBlack"
-        android:text="TEST3"
         android:textSize="@dimen/text_size_inside_textview_options"
         android:textColor="@color/colorWhite"
         android:gravity="center"
@@ -101,8 +96,7 @@
         app:layout_constraintBottom_toTopOf="@id/gl_top"
         android:layout_margin="@dimen/top_textview_margin"
         android:textSize="@dimen/top_textview_text_size"
-        android:gravity="center"
-        android:text="0 / 0"/>
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/tv_timer"
