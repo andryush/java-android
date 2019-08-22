@@ -16,8 +16,19 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
 
     private ArrayList<Note> notes;
 
+    private OnNoteClickListener onNoteClickListener;
+
     public NotesAdapter(ArrayList<Note> notes) {
         this.notes = notes;
+    }
+
+    public interface OnNoteClickListener {
+        void onNoteClick(int position);
+        void onNoteLongClick(int position);
+    }
+
+    public void setOnNoteClickListner(OnNoteClickListener onNoteClickListner) {
+        this.onNoteClickListener = onNoteClickListner;
     }
 
     @NonNull
@@ -76,6 +87,25 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
             textViewTitle = itemView.findViewById(R.id.tv_title);
             textViewDescription = itemView.findViewById(R.id.tv_description);
             textViewDayOfWeek = itemView.findViewById(R.id.tv_dayOfWeek);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (onNoteClickListener != null) {
+                        onNoteClickListener.onNoteClick(getAdapterPosition());
+                    }
+                }
+            });
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    if (onNoteClickListener != null) {
+                        onNoteClickListener.onNoteLongClick(getAdapterPosition());
+                    }
+                    return true;
+                }
+            });
 
         }
     }
