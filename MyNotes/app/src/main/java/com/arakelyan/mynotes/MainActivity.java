@@ -1,85 +1,56 @@
 package com.arakelyan.mynotes;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.arakelyan.mynotes.Model.MainViewModel;
 import com.arakelyan.mynotes.classes.Note;
 import com.arakelyan.mynotes.classes.NotesAdapter;
-import com.arakelyan.mynotes.classes.NotesContract;
-import com.arakelyan.mynotes.classes.NotesDBHelper;
+
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewNotes;
     private NotesAdapter adapter;
-    public static final ArrayList<Note> notes = new ArrayList<>();
+    private final ArrayList<Note> notes = new ArrayList<>();
+    private MainViewModel mainViewModel;
 
-    private NotesDBHelper notesDBHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
+
+        mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+
         recyclerViewNotes = findViewById(R.id.rv_notes);
 
-        notesDBHelper = new NotesDBHelper(this);
-
-        SQLiteDatabase sqLiteDatabase = notesDBHelper.getWritableDatabase();
-
-//        if (notes.isEmpty()) {
-//
-//            notes.add(new Note("Shop", "Buy milk", "Monday", 2 ));
-//            notes.add(new Note("Shop", "Buy sugar", "Sunday", 2 ));
-//            notes.add(new Note("Work", "Start newsletter", "Tuesday", 1 ));
-//            notes.add(new Note("Work", "Change banner", "Monday", 2 ));
-//            notes.add(new Note("Home", "Update TV", "Wednesday", 3 ));
-//            notes.add(new Note("Barbershop", "Cut hair", "Thursdays", 1 ));
-//            notes.add(new Note("Home", "Do some work", "Monday", 2 ));
-//
-//        }
-//
-//        for (Note note : notes) {
-//            ContentValues contentValues = new ContentValues();
-//            contentValues.put(NotesContract.NotesEntry.COLUMN_TITLE, note.getTitle());
-//            contentValues.put(NotesContract.NotesEntry.COLUMN_DESCRIPTION, note.getDescription());
-//            contentValues.put(NotesContract.NotesEntry.COLUMN_DAY_OF_WEEK, note.getDayOfWeek());
-//            contentValues.put(NotesContract.NotesEntry.COLUMN_PRIORITY, note.getPriority());
-//            sqLiteDatabase.insert(NotesContract.NotesEntry.TABLE_NAME, null, contentValues);
-//
-//        }
-
-        ArrayList<Note> notesFromDB = new ArrayList<>();
-
-        Cursor cursor = sqLiteDatabase.query(NotesContract.NotesEntry.TABLE_NAME, null, null, null, null, null, null);
-
-
-        while (cursor.moveToNext()) {
-            String title = cursor.getString(cursor.getColumnIndex(NotesContract.NotesEntry.COLUMN_TITLE));
-            String description = cursor.getString(cursor.getColumnIndex(NotesContract.NotesEntry.COLUMN_DESCRIPTION));
-            String dayОfweek = cursor.getString(cursor.getColumnIndex(NotesContract.NotesEntry.COLUMN_DAY_OF_WEEK));
-            int priority = cursor.getInt(cursor.getColumnIndex(NotesContract.NotesEntry.COLUMN_PRIORITY));
-
-            Note note = new Note(title, description, dayОfweek, priority);
-            notesFromDB.add(note);
-        }
-        cursor.close();
-
-        adapter = new NotesAdapter(notesFromDB);
+        adapter = new NotesAdapter(notes);
         recyclerViewNotes.setLayoutManager(new LinearLayoutManager(this));
+
+        getData();
+
         recyclerViewNotes.setAdapter(adapter);
 
 
@@ -113,8 +84,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void removeClickedNote(int position) {
-        notes.remove(position);
-        adapter.notifyDataSetChanged();
+
+        Note note = notes.get(position);
+
+        mainViewModel.deleteNote(note);
     }
 
     public void onClickAddButton(View view) {
@@ -124,4 +97,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(addNoteIntent);
 
     }
+
+    private void getData() {
+        LiveData<List<Note>> notesFromDB = mainViewModel.getNotes();
+        notesFromDB.observe(this, new Observer<List<Note>>() {
+            @Override
+            public void onChanged(List<Note> notesFromLiveData) {
+                notes.clear();
+                notes.addAll(notesFromLiveData);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+    }
+
 }

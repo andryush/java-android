@@ -1,21 +1,41 @@
 package com.arakelyan.mynotes.classes;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "notes")
 public class Note {
 
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private String title;
     private String description;
-    private String dayOfWeek;
+    private int dayOfWeek;
     private int priority;
 
     public Note() {
     }
 
-    public Note(String title, String description, String dayOfWeek, int priority) {
+    public Note(int id,String title, String description, int dayOfWeek, int priority) {
 
+        this.id = id;
         this.title = title;
         this.description = description;
         this.dayOfWeek = dayOfWeek;
         this.priority = priority;
+    }
+
+    @Ignore
+    public Note(String title, String description, int dayOfWeek, int priority) {
+        this.title = title;
+        this.description = description;
+        this.dayOfWeek = dayOfWeek;
+        this.priority = priority;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -26,7 +46,7 @@ public class Note {
         return description;
     }
 
-    public String getDayOfWeek() {
+    public int getDayOfWeek() {
         return dayOfWeek;
     }
 
@@ -34,12 +54,60 @@ public class Note {
         return priority;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDayOfWeek(int dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public static String getDayAsString(int position) {
+        switch (position) {
+
+            case 1:
+                return "Monday";
+
+            case 2:
+                return "Tuesday";
+
+            case 3:
+                return "Wednesday";
+
+            case 4:
+                return "Thursday";
+
+            case 5:
+                return "Friday";
+
+            case 6:
+                return "Saturday";
+
+            default:
+                return "Sunday";
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Note{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", dayOfWeek='" + dayOfWeek + '\'' +
+                ", dayOfWeek=" + dayOfWeek +
                 ", priority=" + priority +
                 '}';
     }
