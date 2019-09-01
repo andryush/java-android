@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KinoList</string>
+    <string name="error_message">Произошла ошибка</string>
+    <string name="successful">Успешно</string>
+    <string name="small_poster_image">Постер к фильму</string>
+    <string name="tv_popularity">Популярные</string>
+    <string name="tv_top_rated">Рейтинговые</string>
+</resources>
