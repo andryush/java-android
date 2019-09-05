@@ -17,9 +17,30 @@ import java.util.ArrayList;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
     private ArrayList<Movie> movies;
+    private OnReachEndListener onReachEndListener;
+    private OnPostClickListener onPostClickListener;
 
     public MovieAdapter() {
         movies = new ArrayList<>();
+    }
+
+
+    public interface OnPostClickListener{
+        void onPostClick(int position);
+    }
+
+
+    public interface OnReachEndListener {
+        void onReachEnd();
+    }
+
+
+    public void setOnPostClickListener(OnPostClickListener onPostClickListener) {
+        this.onPostClickListener = onPostClickListener;
+    }
+
+    public void setOnReachEndListener(OnReachEndListener onReachEndListener) {
+        this.onReachEndListener = onReachEndListener;
     }
 
     @NonNull
@@ -31,6 +52,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
+
+        if (position > movies.size() - 4 && onReachEndListener != null) {
+            onReachEndListener.onReachEnd();
+        }
 
         Movie movie = movies.get(position);
 
@@ -49,6 +74,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
         public MovieViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (onPostClickListener != null) {
+                        onPostClickListener.onPostClick(getAdapterPosition());
+                    }
+                }
+            });
             imageViewSmallPoster = itemView.findViewById(R.id.iv_small_poster);
         }
     }
