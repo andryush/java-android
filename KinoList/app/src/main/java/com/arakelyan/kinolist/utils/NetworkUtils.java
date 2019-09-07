@@ -2,10 +2,8 @@ package com.arakelyan.kinolist.utils;
 
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,7 +25,7 @@ public class NetworkUtils {
     private static final String API_KEY = "dd4d3580d5d050f5ede3676f3a13bb25";
     private static final String VALUE_LANGUAGE = "ru-RU";
     private static final String SORT_BY_POPULARITY = "popularity.desc";
-    private static final String SORT_BY_TOP_RATED = "vote_average.desc";
+    private static final String SORT_BY_TOP_RATED = "vote_count.desc";
 
     public static final int POPULARITY = 0;
     public static final int TOP_RATED = 1;

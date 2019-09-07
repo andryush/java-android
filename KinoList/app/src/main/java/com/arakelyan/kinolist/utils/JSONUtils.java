@@ -48,7 +48,7 @@ public class JSONUtils {
                 String posterPath = BASE_POSTER_URL + SMALL_POSTER_SIZE + objectMovie.getString(KEY_POSTER_PATH);
                 String largePosterPath = BASE_POSTER_URL + LARGE_POSTER_SIZE + objectMovie.getString(KEY_POSTER_PATH);
                 String backdropPath = objectMovie.getString(KEY_BACKDROP_PATH);
-                Double voteAverage = objectMovie.getDouble(KEY_VOTE_AVERAGE);
+                double voteAverage = objectMovie.getDouble(KEY_VOTE_AVERAGE);
                 String releaseDate = objectMovie.getString(KEY_RELEASE_DATE);
 
                 Movie movie = new Movie(id,voteCount, title, originalTitle, overview, posterPath, largePosterPath, backdropPath, voteAverage, releaseDate);

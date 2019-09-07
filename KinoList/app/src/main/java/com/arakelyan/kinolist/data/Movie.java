@@ -1,7 +1,12 @@
 package com.arakelyan.kinolist.data;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "movies")
 public class Movie {
 
+    @PrimaryKey
     private int id;
     private int voteCount;
     private String title;
@@ -10,7 +15,7 @@ public class Movie {
     private String posterPath;
     private String largePosterPath;
     private String backdropPath;
-    private Double voteAverage;
+    private double voteAverage;
     private String releaseDate;
 
     public Movie(int id, int voteCount, String title, String originalTitle, String overview, String posterPath, String largePosterPath, String backdropPath, Double voteAverage, String releaseDate) {
