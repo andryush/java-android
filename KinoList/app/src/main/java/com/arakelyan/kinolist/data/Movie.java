@@ -95,11 +95,11 @@ public class Movie {
         this.backdropPath = backdropPath;
     }
 
-    public Double getVoteAverage() {
+    public double getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(Double voteAverage) {
+    public void setVoteAverage(double voteAverage) {
         this.voteAverage = voteAverage;
     }
 

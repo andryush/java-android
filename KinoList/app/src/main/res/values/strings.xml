@@ -5,4 +5,15 @@
     <string name="small_poster_image">Постер к фильму</string>
     <string name="tv_popularity">Популярные</string>
     <string name="tv_top_rated">Рейтинговые</string>
+    <string name="movie_large_poster_image">Movie large poster image</string>
+    <string name="movie_title">Название:</string>
+    <string name="movie_original_title">Оригинальное название:</string>
+    <string name="movie_rating">Рейтинг:</string>
+    <string name="movie_releaseDate">Дата выхода:</string>
+    <string name="movie_overview">Описание:</string>
+    <string name="favorites_logo_unchecked">favoritesLogoUnchecked</string>
+    <string name="added_to_favorites">Добавлено в избранное</string>
+    <string name="removed_from_favorites">Удалено из избранного</string>
+    <string name="menu_item_main">Главная</string>
+    <string name="menu_item_favorite">Избранное</string>
 </resources>

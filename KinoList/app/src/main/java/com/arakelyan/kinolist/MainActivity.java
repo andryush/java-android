@@ -1,5 +1,6 @@
 package com.arakelyan.kinolist;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
@@ -7,7 +8,11 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -36,6 +41,34 @@ public class MainActivity extends AppCompatActivity {
 
     private MainViewModel viewModel;
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_manu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id) {
+
+            case R.id.itemMain:
+                Intent mainIntent = new Intent(this, MainActivity.class);
+                startActivity(mainIntent);
+                break;
+
+            case R.id.itemFavorite:
+                Intent favoriteIntent = new Intent(this, FavoriteActivity.class);
+                startActivity(favoriteIntent);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +103,14 @@ public class MainActivity extends AppCompatActivity {
         movieAdapter.setOnPostClickListener(new MovieAdapter.OnPostClickListener() {
             @Override
             public void onPostClick(int position) {
-                Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
+
+                Movie movie = movieAdapter.getMovies().get(position);
+
+                Intent movieDetailsIntent = new Intent(MainActivity.this, DetailActivity.class);
+
+                movieDetailsIntent.putExtra("id", movie.getId());
+
+                startActivity(movieDetailsIntent);
             }
         });
 
