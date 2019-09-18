@@ -90,13 +90,18 @@ public class DetailActivity extends AppCompatActivity {
 
         movie = viewModel.getMovieById(id);
 
-        Picasso.get().load(movie.getLargePosterPath()).into(imageViewLargePoster);
+        if (movie != null) {
 
-        textViewTitle.setText(movie.getTitle());
-        textViewOriginalTitle.setText(movie.getOriginalTitle());
-        textViewOverview.setText(movie.getOverview());
-        textViewReleaseDate.setText(movie.getReleaseDate());
-        textViewRating.setText(Double.toString(movie.getVoteAverage()));
+            createMovieDetails(movie);
+
+        }
+        else {
+            movie = viewModel.getFavoriteMovieById(id);
+
+            createMovieDetails(movie);
+
+        }
+
 
         setFavorite();
 
@@ -127,5 +132,16 @@ public class DetailActivity extends AppCompatActivity {
             imageViewFavoritesLogoUnchecked.setImageResource(R.drawable.starfilled);
         }
 
+    }
+
+    private void createMovieDetails(Movie movie) {
+
+        Picasso.get().load(movie.getLargePosterPath()).into(imageViewLargePoster);
+
+        textViewTitle.setText(movie.getTitle());
+        textViewOriginalTitle.setText(movie.getOriginalTitle());
+        textViewOverview.setText(movie.getOverview());
+        textViewReleaseDate.setText(movie.getReleaseDate());
+        textViewRating.setText(Double.toString(movie.getVoteAverage()));
     }
 }
